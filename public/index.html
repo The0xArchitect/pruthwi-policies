@@ -1,89 +1,136 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pruthwi · Vadakara Municipality</title>
+  <meta name="description" content="Pruthwi is Vadakara Municipality's app for reporting civic issues. Read its privacy policy and terms of use, or ask to delete your account.">
+  <link rel="canonical" href="https://pruthwi.zetaspace.co/">
+  <meta name="theme-color" content="#1659b8">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pruthwi · Vadakara Municipality">
+  <meta property="og:description" content="Privacy policy, terms of use and account deletion for the Pruthwi civic issue reporting app.">
+  <meta property="og:url" content="https://pruthwi.zetaspace.co/">
+  <meta property="og:image" content="https://pruthwi.zetaspace.co/assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preload" href="/assets/fonts/PlusJakartaSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/13.3.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/13.3.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/13.3.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <img src="/assets/img/pruthwi-logo.webp" alt="" width="34" height="34">
+        <span>Pruthwi<small>Vadakara Municipality</small></span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/delete-account">Delete account</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-mode="system" aria-label="Theme: match device (click to change)">
+        <svg class="icon-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>
+      </button>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+  </header>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  <main id="main">
+    <section class="hero">
+      <svg class="hero-contours" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M-40 120 C 180 60, 320 200, 520 150 S 860 40, 1240 110"/>
+        <path d="M-40 170 C 200 110, 330 250, 540 200 S 880 90, 1240 160"/>
+        <path d="M-40 220 C 210 170, 350 300, 560 250 S 900 140, 1240 210"/>
+        <path d="M-40 290 C 160 250, 380 360, 600 310 S 940 210, 1240 280"/>
+        <path d="M-40 360 C 180 320, 400 430, 620 380 S 960 280, 1240 350"/>
+        <path d="M-40 430 C 200 400, 420 500, 640 450 S 980 350, 1240 420"/>
+      </svg>
+      <div class="container hero-inner">
+        <img class="hero-logo" src="/assets/img/pruthwi-logo.webp" alt="Pruthwi logo" width="240" height="240">
+        <div>
+          <span class="eyebrow">Vadakara Municipality · Civic issue reporting</span>
+          <h1>Spot it. Pin it. <span class="grad">Track it to the fix.</span></h1>
+          <p class="lede">
+            Pruthwi is the Vadakara Municipality app for reporting water logging, waste dumping,
+            broken streetlights, potholes and other civic problems. Volunteers pin each issue on the
+            map with optional photos; municipal officials and ward councilors act on it and record
+            what was done. Accounts are created by the municipality; there is no public sign-up.
+          </p>
+        </div>
+      </div>
+    </section>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Policies</h2>
+        <div class="cards">
+          <a class="card" href="/privacy">
+            <h3>Privacy policy</h3>
+            <p>What Pruthwi collects, why, who can see it, where it is stored and the rights you have under India's DPDP Act.</p>
+            <span class="go">Read the privacy policy →</span>
+          </a>
+          <a class="card" href="/terms">
+            <h3>Terms of use</h3>
+            <p>The rules for using Pruthwi: who can use it, how to report responsibly, and what the municipality can and can't promise.</p>
+            <span class="go">Read the terms →</span>
+          </a>
+          <a class="card" href="/delete-account">
+            <h3>Delete your account</h3>
+            <p>How to ask for your Pruthwi account to be deleted, what is erased, and what stays as a municipal record.</p>
+            <span class="go">Request deletion →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Privacy at a glance</h2>
+        <ul class="facts">
+          <li><strong>Location only while you use the app</strong><span>Pruthwi uses your location to place a report and show you on the map. It never tracks you in the background.</span></li>
+          <li><strong>Photos are cleaned on your phone</strong><span>Before upload, each photo is resized and its hidden metadata (EXIF, including GPS coordinates and camera details) is removed.</span></li>
+          <li><strong>No public feed</strong><span>Reports are seen only by the person who filed them and by the municipality's officials and councilors. Volunteers never see each other's names.</span></li>
+          <li><strong>Never sold, no ads</strong><span>Your information is used to handle civic issues for Vadakara Municipality. It is not sold or used for advertising.</span></li>
+        </ul>
+        <p>Questions about your data? Write to <a href="mailto:privacy@zetaspace.co">privacy@zetaspace.co</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="built-by" href="https://zetaspace.co" rel="noopener">
+            <span>Built by</span>
+            <img src="/assets/img/zeta-space.png" alt="Zeta Space" width="150" height="34">
+          </a>
+          <p>Pruthwi is provided for Vadakara Municipality and is developed and operated by Zetaspace Intelligence Private Limited.</p>
+        </div>
+        <div>
+          <h2>Policies</h2>
+          <ul class="footer-links">
+            <li><a href="/privacy">Privacy policy</a></li>
+            <li><a href="/terms">Terms of use</a></li>
+            <li><a href="/delete-account">Delete your account</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <p><a href="mailto:privacy@zetaspace.co">privacy@zetaspace.co</a></p>
+          <address class="address">Zetaspace Intelligence Pvt Ltd<br>Centre for Innovation &amp; Entrepreneurship<br>University of Calicut, Thenhipalam<br>Kozhikode, Keralam 673635</address>
+        </div>
+      </div>
+      <div class="footer-base">
+        <span>© <span data-year>2026</span> Zetaspace Intelligence Private Limited · CIN U72100KL2025PTC095408</span>
+        <span>This site uses no cookies and no trackers.</span>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
